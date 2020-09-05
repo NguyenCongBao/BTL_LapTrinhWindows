@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CEF3112A-1BBD-4902-8882-55EFB80AE940}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyThuVien_GUI</RootNamespace>
+    <AssemblyName>QuanLyThuVien_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NguyenCongBao\dangNhap_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\dangNhap_GUI.Designer.cs">
+      <DependentUpon>dangNhap_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenCongBao\dataPM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataPM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenCongBao\muonSach_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\muonSach_GUI.Designer.cs">
+      <DependentUpon>muonSach_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenCongBao\PrintPM_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\PrintPM_GUI.Designer.cs">
+      <DependentUpon>PrintPM_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenCongBao\qlMatKhau_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\qlMatKhau_GUI.Designer.cs">
+      <DependentUpon>qlMatKhau_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenCongBao\rptPM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\ThemTLvaoPM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\ThemTLvaoPM.Designer.cs">
+      <DependentUpon>ThemTLvaoPM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenCongBao\traSach_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenCongBao\traSach_GUI.Designer.cs">
+      <DependentUpon>traSach_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\ThongKe10_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\ThongKe10_GUI.Designer.cs">
+      <DependentUpon>ThongKe10_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\TK10TL.cs">
+      <DependentUpon>TK10TL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\TK10TL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TK10TL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\rptTK10TL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTK10TL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\ChucVu.Designer.cs">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\FormHiensltheoThL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\FormHiensltheoThL.Designer.cs">
+      <DependentUpon>FormHiensltheoThL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\ThongKesolanmuontheoThL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\ThongKesolanmuontheoThL.Designer.cs">
+      <DependentUpon>ThongKesolanmuontheoThL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\TKSLtheoThL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKSLtheoThL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NguyenTrungDuc\TKsolanMuon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKsolanMuon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NguyenThiMinhNgoc\QuanLyTaiLieu_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\QuanLyTaiLieu_GUI.Designer.cs">
+      <DependentUpon>QuanLyTaiLieu_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\QuanLyTheLoai_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\QuanLyTheLoai_GUI.Designer.cs">
+      <DependentUpon>QuanLyTheLoai_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuangNgoc\crpTKTLQH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpTKTLQH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuangNgoc\datasetTLTLquahan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetTLTLquahan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuangNgoc\QuanLyDoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuangNgoc\QuanLyDoiTuong.Designer.cs">
+      <DependentUpon>QuanLyDoiTuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuangNgoc\QuanLyDocGia_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuangNgoc\QuanLyDocGia_GUI.Designer.cs">
+      <DependentUpon>QuanLyDocGia_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuangNgoc\ThongKeTaiLieuQuaHan_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuangNgoc\ThongKeTaiLieuQuaHan_GUI.Designer.cs">
+      <DependentUpon>ThongKeTaiLieuQuaHan_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuangNgoc\TKTLQH_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuangNgoc\TKTLQH_GUI.Designer.cs">
+      <DependentUpon>TKTLQH_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Thu_VienDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quan_Ly_Thu_VienDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Thu_VienDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quan_Ly_Thu_VienDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="runQLTV_GUI.cs" />
+    <Compile Include="NguyenThiMinhNgoc\ThongKeTop10TaiLieu_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\ThongKeTop10TaiLieu_GUI.Designer.cs">
+      <DependentUpon>ThongKeTop10TaiLieu_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trangChu_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trangChu_GUI.Designer.cs">
+      <DependentUpon>trangChu_GUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NguyenCongBao\dangNhap_GUI.resx">
+      <DependentUpon>dangNhap_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenCongBao\muonSach_GUI.resx">
+      <DependentUpon>muonSach_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenCongBao\PrintPM_GUI.resx">
+      <DependentUpon>PrintPM_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenCongBao\qlMatKhau_GUI.resx">
+      <DependentUpon>qlMatKhau_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenCongBao\rptPM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenCongBao\ThemTLvaoPM.resx">
+      <DependentUpon>ThemTLvaoPM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenCongBao\traSach_GUI.resx">
+      <DependentUpon>traSach_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenThiMinhNgoc\ThongKe10_GUI.resx">
+      <DependentUpon>ThongKe10_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenThiMinhNgoc\rptTK10TL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTK10TL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenTrungDuc\ChucVu.resx">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenTrungDuc\FormHiensltheoThL.resx">
+      <DependentUpon>FormHiensltheoThL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenTrungDuc\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenTrungDuc\ThongKesolanmuontheoThL.resx">
+      <DependentUpon>ThongKesolanmuontheoThL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenTrungDuc\TKSLtheoThL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TKSLtheoThL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="NguyenThiMinhNgoc\QuanLyTaiLieu_GUI.resx">
+      <DependentUpon>QuanLyTaiLieu_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenThiMinhNgoc\QuanLyTheLoai_GUI.resx">
+      <DependentUpon>QuanLyTheLoai_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguyenThiMinhNgoc\ThongKeTop10TaiLieu_GUI.resx">
+      <DependentUpon>ThongKeTop10TaiLieu_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuangNgoc\crpTKTLQH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpTKTLQH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuangNgoc\QuanLyDoiTuong.resx">
+      <DependentUpon>QuanLyDoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuangNgoc\QuanLyDocGia_GUI.resx">
+      <DependentUpon>QuanLyDocGia_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuangNgoc\ThongKeTaiLieuQuaHan_GUI.resx">
+      <DependentUpon>ThongKeTaiLieuQuaHan_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuangNgoc\TKTLQH_GUI.resx">
+      <DependentUpon>TKTLQH_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trangChu_GUI.resx">
+      <DependentUpon>trangChu_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="NguyenCongBao\dataPM.xsc">
+      <DependentUpon>dataPM.xsd</DependentUpon>
+    </None>
+    <None Include="NguyenCongBao\dataPM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataPM.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NguyenCongBao\dataPM.xss">
+      <DependentUpon>dataPM.xsd</DependentUpon>
+    </None>
+    <None Include="NguyenThiMinhNgoc\TK10TL.xsc">
+      <DependentUpon>TK10TL.xsd</DependentUpon>
+    </None>
+    <None Include="NguyenThiMinhNgoc\TK10TL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TK10TL.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NguyenThiMinhNgoc\TK10TL.xss">
+      <DependentUpon>TK10TL.xsd</DependentUpon>
+    </None>
+    <None Include="NguyenTrungDuc\TKsolanMuon.xsc">
+      <DependentUpon>TKsolanMuon.xsd</DependentUpon>
+    </None>
+    <None Include="NguyenTrungDuc\TKsolanMuon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKsolanMuon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NguyenTrungDuc\TKsolanMuon.xss">
+      <DependentUpon>TKsolanMuon.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\dangNhap_GUI.datasource" />
+    <None Include="Properties\DataSources\muonSach_GUI.datasource" />
+    <None Include="Properties\DataSources\QuanLyTaiLieu_GUI.datasource" />
+    <None Include="Properties\DataSources\QuanLyTheLoai_GUI.datasource" />
+    <None Include="Properties\DataSources\QuanLyThuVien_BUS.ThongKeQuaHan_BUS.datasource" />
+    <None Include="Properties\DataSources\QuanLyThuVien_GUI.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\QuanLyThuVien_GUI.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\QuanLyThuVien_GUI.Quan_Ly_Thu_VienDataSetTableAdapters.DocGia10TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Report.datasource" />
+    <None Include="Properties\DataSources\ReportQuaHan.datasource" />
+    <None Include="Properties\DataSources\runQLTV_GUI.datasource" />
+    <None Include="Properties\DataSources\ThongKe.datasource" />
+    <None Include="Properties\DataSources\ThongKeQuaHan.datasource" />
+    <None Include="Properties\DataSources\ThongKeTop10TaiLieu_GUI.datasource" />
+    <None Include="Properties\DataSources\trangChu_GUI.datasource" />
+    <None Include="Properties\DataSources\traSach_GUI.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyThuVien_BUS\QuanLyThuVien_BUS.csproj">
+      <Project>{A42EEE5B-9223-496A-8CF6-32AA20ECCF58}</Project>
+      <Name>QuanLyThuVien_BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuanLyThuVien_DAL\QuanLyThuVien_DAL.csproj">
+      <Project>{164025A2-CE1C-478C-AF70-40D96E5EF881}</Project>
+      <Name>QuanLyThuVien_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuanLyThuVien_DTO\QuanLyThuVien_DTO.csproj">
+      <Project>{990F7825-6564-49A9-948B-FDA69C7C8083}</Project>
+      <Name>QuanLyThuVien_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuangNgoc\datasetTLTLquahan.xsc">
+      <DependentUpon>datasetTLTLquahan.xsd</DependentUpon>
+    </None>
+    <None Include="QuangNgoc\datasetTLTLquahan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetTLTLquahan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuangNgoc\datasetTLTLquahan.xss">
+      <DependentUpon>datasetTLTLquahan.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Thu_VienDataSet.xsc">
+      <DependentUpon>Quan_Ly_Thu_VienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Thu_VienDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quan_Ly_Thu_VienDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quan_Ly_Thu_VienDataSet.xss">
+      <DependentUpon>Quan_Ly_Thu_VienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Thu_VienDataSet1.xsc">
+      <DependentUpon>Quan_Ly_Thu_VienDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Quan_Ly_Thu_VienDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quan_Ly_Thu_VienDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quan_Ly_Thu_VienDataSet1.xss">
+      <DependentUpon>Quan_Ly_Thu_VienDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\timkiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\book %281%29.png" />
+    <Content Include="Resources\book %282%29.png" />
+    <Content Include="Resources\bookcase.png" />
+    <Content Include="Resources\clean.png" />
+    <Content Include="Resources\employee %282%29.png" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\library.png" />
+    <Content Include="Resources\log-out.png" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\object.png" />
+    <Content Include="Resources\position.png" />
+    <Content Include="Resources\read.png" />
+    <Content Include="Resources\research.png" />
+    <Content Include="Resources\reset %281%29.png" />
+    <Content Include="Resources\reset %285%29.png" />
+    <Content Include="Resources\reset.png" />
+    <Content Include="Resources\see.png" />
+    <Content Include="Resources\seen.png" />
+    <Content Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

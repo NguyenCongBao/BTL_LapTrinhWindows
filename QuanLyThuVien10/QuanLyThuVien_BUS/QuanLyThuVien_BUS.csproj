@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A42EEE5B-9223-496A-8CF6-32AA20ECCF58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLyThuVien_BUS</RootNamespace>
+    <AssemblyName>QuanLyThuVien_BUS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NguyenCongBao\dangNhap_BUS.cs" />
+    <Compile Include="NguyenCongBao\MuonSach_BUS.cs" />
+    <Compile Include="NguyenCongBao\ReportPM_BUS.cs" />
+    <Compile Include="NguyenCongBao\TraSach_BUS.cs" />
+    <Compile Include="NguyenTrungDuc\ChucVu_BUS.cs" />
+    <Compile Include="NguyenTrungDuc\NhanVien_BUS.cs" />
+    <Compile Include="NguyenTrungDuc\SoLanMuon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="NguyenThiMinhNgoc\TaiLieu_BUS.cs" />
+    <Compile Include="NguyenThiMinhNgoc\TheLoai_BUS.cs" />
+    <Compile Include="NguyenThiMinhNgoc\ThongKeTop10_BUS.cs" />
+    <Compile Include="QuangNgoc\DocGia_BUS.cs" />
+    <Compile Include="QuangNgoc\DoiTuong_BUS.cs" />
+    <Compile Include="QuangNgoc\ThongKeQuaHan_BUS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyThuVien_DAL\QuanLyThuVien_DAL.csproj">
+      <Project>{164025A2-CE1C-478C-AF70-40D96E5EF881}</Project>
+      <Name>QuanLyThuVien_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuanLyThuVien_DTO\QuanLyThuVien_DTO.csproj">
+      <Project>{990f7825-6564-49a9-948b-fda69c7c8083}</Project>
+      <Name>QuanLyThuVien_DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
